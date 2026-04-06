@@ -1,0 +1,11 @@
+# Variáveis de ambiente e segredos
+.env
+.env.*
+!.env.example
+
+# Diretório de trabalho local
+workspace/
+
+# Diretório interno do pi/opencode
+.pi/
+.opencode/

@@ -1,0 +1,21 @@
+services:
+  ubuntu:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: ubuntu_container
+    hostname: ubuntu-dev
+    stdin_open: true      # equivalente ao -i (interactive)
+    tty: true             # equivalente ao -t (pseudo-TTY)
+    ports:
+      - "18789:18789"
+    environment:
+      - OPENCLAW_GATEWAY_BIND=lan      # escuta em 0.0.0.0 dentro do container
+      - OPENCLAW_GATEWAY_PORT=18789
+    volumes:
+      - workspace_data:/workspace
+    restart: unless-stopped
+
+volumes:
+  workspace_data:
+    name: ubuntu_workspace
