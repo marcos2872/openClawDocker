@@ -6,6 +6,5 @@
 # Diretório de trabalho local
 workspace/
 
-# Diretório interno do pi/opencode
-.pi/
+# Diretório interno do opencode
 .opencode/
